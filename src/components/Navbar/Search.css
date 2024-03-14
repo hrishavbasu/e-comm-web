@@ -1,0 +1,22 @@
+.search-bar{
+    display: flex;
+    padding: 0.75rem 0rem;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1 0 0;
+}
+.search-bar img{
+    cursor: pointer;
+}
+
+.search-bar input{
+    color: var(--Black-7, #F6F6F6);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.25rem; /* 125% */
+    outline: 0rem;
+    border: 0rem;
+    background: transparent;
+
+}

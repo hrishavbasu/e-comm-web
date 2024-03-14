@@ -1,0 +1,31 @@
+.cta{
+    width: 100%;
+    height: auto;
+    top: 7.37rem;
+    padding: 15.7rem 23.2rem 47.5rem 23.2rem;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.features{
+    position: relative;
+    color: var(--Primary-Black-Black-500, #231F20);
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 2.625rem;
+
+}
+
+.text{
+    width: fixed;
+    color:  #231F20;
+    text-align: left;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2rem; 
+}
+
