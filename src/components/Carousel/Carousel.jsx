@@ -9,8 +9,9 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/autoplay'
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 const images  = [Rectangle_1, Rectangle_2, Rectangle_3, Rectangle_4, Rectangle_5]
 
@@ -19,6 +20,11 @@ function Carousel() {
   return (
     <div className="container">
         <Swiper
+        autoplay = {{
+          delay: 1500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        }}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -36,7 +42,7 @@ function Carousel() {
           prevEl: '.swiper-button-prev',
           clickable: true,
         }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
+        modules={[Autoplay,EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
         <SwiperSlide>

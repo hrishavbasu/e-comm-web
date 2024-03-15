@@ -1,3 +1,6 @@
+@import 'swiper/css/pagination';
+
+
 *::before,
 *::after {
   margin: 0;
@@ -30,17 +33,25 @@
   position: relative;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+  .container {
+    width: auto;
+  }
   .swiper_container {
-    height: 47rem;
+    padding: 2rem 0rem 0rem 2rem ;
+    margin: 0;
+    height: auto;
   }
   .swiper-slide {
-    width: 28rem !important;
-    height: 36rem !important;
+    width: 10rem !important;
+    height: 10rem !important;
   }
   .swiper-slide img {
-    width: 28rem !important;
-    height: 36rem !important;
+    width: 10rem !important;
+    height: 10rem !important;
+    margin-left: 0;
+    margin-right: 0;
+    object-fit: cover;
   }
 }
 
@@ -65,6 +76,8 @@
   justify-content: center;
 }
 
+
+
 .slider-controler .swiper-button-next {
   left: 58% !important;
   transform: translateX(-58%) !important;
@@ -72,15 +85,16 @@
 
 @media (max-width: 990px) {
   .slider-controler .swiper-button-next {
-    left: 70% !important;
-    transform: translateX(-70%) !important;
+    left: 80% !important;
+    transform: translateX(-80%) !important;
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .slider-controler .swiper-button-next {
-    left: 80% !important;
-    transform: translateX(-80%) !important;
+    /* left: 80% !important;
+    transform: translateX(-80%) !important; */
+    display: none;
   }
 }
 
@@ -91,10 +105,11 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 600px) {
   .slider-controler .swiper-button-prev {
-    left: 20% !important;
-    transform: translateX(-20%) !important;
+    /* left: 20% !important;
+    transform: translateX(-20%) !important; */
+    display: none;
   }
 }
 
@@ -119,9 +134,18 @@
 }
 
 .swiper-pagination {
+    top: var(--swiper-pagination-top, 3px) !important;
     bottom: 100%;
     width: 15rem !important;
     margin-left: 44%;
+}
+
+@media(max-width : 600px){
+  .swiper-pagination {
+    top: var(--swiper-pagination-top, 15px) !important;
+    width: 15rem !important;
+    margin-left: 44%;
+}  
 }
 
 .swiper-pagination .swiper-pagination-bullet {

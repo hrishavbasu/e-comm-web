@@ -88,33 +88,41 @@
   }
   
   @media screen and (max-width: 1024px) {
-    .NavbarItems {
-      position: relative;
-    }
-  
     .nav-menu {
       display: flex;
       flex-direction: column;
       width: auto;
-      height: auto;
+      height: fit-content;
       position: absolute;
       top: 120px;
+      gap: 0;
       right: -100%;
       opacity: 0;
       transition: all 0.5s ease;
     }
   
     .nav-menu.active {
+      position: absolute;
       background: #2F302C;
+      max-height: auto;
+      overflow: scroll;
+      overflow-y: auto;
       right: 0;
       opacity: 1;
       transition: all 0.5s ease;
-      z-index: 1;
+      z-index: 10;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
     }
   
     .nav-links {
+      position: relative;
       text-align: center;
-      padding: 2rem;
+      padding: 1rem;
       width: 100%;
       display: table;
     }
@@ -147,16 +155,17 @@
     }
   
     .nav-links-mobile {
+      position: relative;
       display: block;
       text-align: center;
-      padding: 1.5rem;
+      padding: 1rem;
       margin: 2rem auto;
       border-radius: 4px;
-      width: 80%;
+      width: 100%;
       background: #1888ff;
       text-decoration: none;
       color: #fff;
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   
     .nav-links-mobile:hover {
